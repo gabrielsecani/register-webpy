@@ -1,3 +1,5 @@
+.keep
+.DS_Store
 *.sqlite
 
 # Byte-compiled / optimized / DLL files
