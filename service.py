@@ -18,7 +18,7 @@ def convertFileToDatabase(uploaded_file):
     # Convert digital data to binary format
     print('converting file ')
     print(uploaded_file)
-    
+
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(uploaded_file.filename))
 
     print(file_path)

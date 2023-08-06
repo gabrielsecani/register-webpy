@@ -8,7 +8,7 @@ db = SQLAlchemy(app)
 class Register(db.Model):
     __tablename__ = "register"
     id = db.Column('id', db.Integer, primary_key=True)
-    title = db.Column('title', db.String(200))
+    name = db.Column('name', db.String(200))
     company = db.Column('company', db.String(200))
     options = db.Column('options', db.String(200))
     workload = db.Column('workload', db.Integer)

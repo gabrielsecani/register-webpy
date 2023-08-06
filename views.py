@@ -27,10 +27,10 @@ def add():
         from service import convertFileToDatabase
         wl_file_id = convertFileToDatabase(wl_file_uploaded)
         print("workload id: " + str(wl_file_id))
-    title = request.form.get("title")
+    name = request.form.get("name")
     company = request.form.get("company")
     options = "|".join(request.form.getlist("options"))
-    new_register = Register(title=title, company=company, options=options, complete=False, workload=wl_file_id)
+    new_register = Register(name=name, company=company, options=options, complete=False, workload=wl_file_id)
     print(db.session.add(new_register))
     db.session.commit()
     return redirect(url_for("home"))
